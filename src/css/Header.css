@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,400;1,600&family=Outfit:wght@400;700&family=Victor+Mono:wght@500&display=swap');
+
+ 
+ 
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    position: fixed;
+    background-color: rgba(230, 228, 228, 0.75);
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+    list-style: none;
+}
+
+li{
+    font-family: 'Victor Mono', monospace;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+ul li a {
+    color: rgb(0, 0, 0);
+}
+
+ul li a:visited {
+    color: black;
+}
+
+ul li a:active {
+    color: rgb(0, 0, 0); /* Replace 'blue' with your desired color for the active link */
+}
+
+
+.Search-wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.Search-wrapper input{
+    width: 310px;
+    height: 69px;
+    border-radius: 50px ;
+    border:3px white;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.Search-wrapper input::placeholder{
+    text-align: center;
+  
+}
+
+.Search-wrapper input:focus{
+   outline: none;
+}
+
+
+.Search-wrapper a{
+    font-size: 50px;
+    margin-left: 20px;
+    color: black;
+}

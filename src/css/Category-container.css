@@ -1,0 +1,10 @@
+.Category-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 435px;
+    margin: 0 auto;
+    padding-top: 16rem;
+    gap: 100px;
+}

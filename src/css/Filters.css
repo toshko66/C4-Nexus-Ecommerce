@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,400;1,600&family=Outfit:wght@400;700&family=Victor+Mono:wght@500&display=swap');
+
+
+.Sort-container{
+    display: flex;
+    flex-direction: column;
+    padding-top: 14rem;
+    padding-right: 27rem;
+}
+
+
+.Filter-container{
+    display: flex;
+    padding-top: 4rem;
+}
+
+.Form-wrapper{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+.Filters-wrapper{
+  font-size: 2.4em;  
+  font-family: 'Victor Mono', monospace;
+}
+
+.Filters-wrapper .Dropdown{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.Dropdown select{
+    height: 40px;
+    width: 192px;
+    font-size: 20px;
+    border-radius: 20px;
+    font-family: 'Victor Mono', monospace;
+}
+
+
+.Price-Range{
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Victor Mono', monospace;
+}
+
+.Form-button{
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #000;
+    cursor: pointer;
+    border: 3px solid;
+    padding: 0.25em 0.5em;
+    box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    }
+    
+    .Form-button:active {
+      box-shadow: 0px 0px 0px 0px;
+      top: 5px;
+      left: 5px;
+    }
+    
+    @media (min-width: 768px) {
+      .Form-button {
+        padding: 0.25em 0.75em;
+      }
+    }
+
+
+    .Sort{
+        display: block;
+        align-self: center;
+        padding-left: 20rem;
+        font-weight: 600;
+        font-size: 20px;
+        font-family: 'Victor Mono', monospace;
+    }
+    
+
+    .Sort select{
+        font-size: 20px;
+        font-family: 'Victor Mono', monospace;
+    }
+    
