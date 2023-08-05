@@ -11,6 +11,14 @@ const Products = () => {
     const [categories, setCategories] = useState([]);
     const [showPerPage, setShowPerPage] = useState(9); // Number of products shown per page
 
+  const updateShowPerPage = () => {
+        if (window.innerWidth <= 1023) {
+            setShowPerPage(prevPerPage => prevPerPage + (prevPerPage % 2 === 0 ? 0 : 1));
+        } else {
+            setShowPerPage(9);
+        }
+    };
+
     useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
         .then(response => {

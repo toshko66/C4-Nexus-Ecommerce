@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { FaFilter } from 'react-icons/fa';
 import '../../css/Filters.css';
 
-const Filters = ({ products, categories, updateFilteredProducts }) => {
+const Filters = ({ products, categories, updateFilteredProducts, isCategoryPage }) => {
     const [filters, setFilters] = useState({ category: 'All', price: '' });
 
     const priceRanges = ['1-25', '26-50', '51-100', '101-250', '251-500', '501-1000'];
@@ -31,17 +32,20 @@ const Filters = ({ products, categories, updateFilteredProducts }) => {
 
     return (
         <form onSubmit={handleSubmit} className='Form-wrapper'>
-            <div className='Filters-wrapper'>
+            <div className='Form-header'>
+               <h2>Filters <FaFilter/></h2> 
+            </div>
+            {!isCategoryPage && <div className='Filters-wrapper'>
                 <label className='Dropdown'>
                     Category:
                     <select name="category" onChange={handleChange} value={filters.category}>
                         <option value="All">All</option>
-                        {categories.map(category => (
+                        {categories && categories.map(category => ( // <- only map if categories is defined
                             <option key={category} value={category}>{category}</option>
                         ))}
                     </select>
                 </label>
-            </div>
+            </div>}
             <div className='Price-Range'>
                 <label>
                     Price Range:

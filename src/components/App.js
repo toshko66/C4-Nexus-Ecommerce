@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Header from './Header/Header';
 import Category from './Header/Category';
 import Products from './Products/Products';
+import Footer from './Footer';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
             <Route path="/category/:category" element={<Category />} />
             <Route path="/*" element={<Navigate to="/" />} /> 
         </Routes>
+        <Footer />
       </Router>
     </div>
   );

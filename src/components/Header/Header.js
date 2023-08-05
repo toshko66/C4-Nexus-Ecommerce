@@ -7,7 +7,7 @@ import '../../css/Header.css'
 const Header = () => {
     return (
         <header>
-            <div className='Category-wrapper'>           
+            <div className='Logo-wrapper'>           
             <img src={require('../../Assets/Images/LOGO.png')} />
             </div>
             <nav>

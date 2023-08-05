@@ -8,6 +8,7 @@ const SortFilter = ({ handleSort }) => {
     setSortOption(selectedOption);
     handleSort(selectedOption);
   };
+  
 
   return (
     <div className='Sort'>

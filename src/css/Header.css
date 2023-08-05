@@ -10,6 +10,7 @@ header{
     align-items: center;
     margin: 0 auto;
     position: fixed;
+    min-height: 130px;
     background-color: rgba(230, 228, 228, 0.75);
 }
 
@@ -69,4 +70,127 @@ ul li a:active {
     font-size: 50px;
     margin-left: 20px;
     color: black;
+    margin-right: 15px;
 }
+
+
+
+.Search-wrapper{
+    position: relative;
+}
+
+
+.Search-wrapper .search-button{
+    position: absolute;
+    height: 69px;
+    border-radius: 50px;
+    left: 20px;
+}
+
+
+
+@media (max-width: 1920px) {
+    .Search-wrapper .search-button{
+        display: none;
+    }
+    header {
+      /* Adjustments specific to large screens */
+    }
+    ul li {
+      font-size: 1.4em; /* You may want to reduce the font size slightly */
+    }
+    .Search-wrapper input {
+      width: 280px; /* Adjust the width of the search bar */
+    }
+    /* Add more adjustments as needed */
+  }
+  
+
+  @media (max-width: 1499px) {
+    .Search-wrapper .search-button{
+        display: none;
+    }
+    header {
+        justify-content: space-evenly;
+    }
+
+    .Logo-wrapper{
+        width: 140px;
+    }
+
+    .Logo-wrapper img{
+        width: 180px;
+    }
+
+
+    ul{
+        gap:25px
+
+    }
+
+    ul li {
+      font-size: 1em;
+    }
+    .Search-wrapper input {
+        width: 180px;
+        height: 40px;
+        font-size: 15px;
+    }
+    
+    .Search-wrapper a{
+font-size: 35px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .Search-wrapper .search-button{
+      display: none;
+  }
+  header {
+      justify-content: space-evenly;
+  }
+
+  .Logo-wrapper{
+      width: 85px;
+  }
+
+  .Logo-wrapper img{
+      width: 150px;
+  }
+
+
+  ul{
+    font-size: 13px;
+    gap: 20px;
+    margin: 0 10px;
+
+  }
+
+  ul li {
+    font-size: 1em;
+  }
+  .Search-wrapper input {
+    width: 150px;
+    height: 33px;
+    font-size: 14px
+  }
+  
+  }
+
+  
+  @media (max-width: 767px) {
+    header {
+      flex-direction: column; /* You might want to stack elements */
+    }
+    ul {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .Search-wrapper input {
+      display: none;
+    }
+
+    
+    /* Add more adjustments as needed */
+  }
+  

@@ -1,10 +1,20 @@
-.Category-container{
+
+
+.Category-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.Filter-container {
+    flex: 1;
+    /* Add other styling as needed */
+}
+
+.Product-list {
+    flex: 3;
+    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    max-width: 435px;
-    margin: 0 auto;
-    padding-top: 16rem;
-    gap: 100px;
+    /* Add other styling as needed */
 }
