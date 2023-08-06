@@ -7,7 +7,7 @@
     padding-top: 14rem;
     margin: 0 auto;
     width: 80%;
-    max-width: 80%;
+    max-width: 1450px;
 }
 
 
@@ -81,7 +81,7 @@
     .Sort{
       display: block;
       align-self: flex-end;
-      padding-right: 15rem;
+      padding-right: 1rem;
       font-weight: 600;
       font-size: 20px;
       font-family: 'Victor Mono', monospace;
@@ -105,21 +105,22 @@
       
       /* Medium Screens (breakpoint at 1499px) */
       @media (max-width: 1599px) {
+        
         .Sort-container {
           padding-top: 12rem;
-          max-width: 80%; /* 85% of 1499px */
+          max-width: 80%; 
         }
 
         .Sort label{
             font-size: 18px;
         }
 
-
         .Filter-container{
             padding-top: 3rem;
             flex-direction: row;
             align-items: flex-start;
         }
+
         .Filters-wrapper{
           font-size: 20px;
         }
@@ -152,7 +153,7 @@
 
         .Sort-container {
           padding-top: 12rem;
-          max-width: 85%; /* Adjust to your preference */
+          max-width: 85%; 
         }
 
         .Sort {
@@ -161,7 +162,7 @@
         }
 
         .Sort select {
-          font-size: 17px; /* Adjust to your preference */
+          font-size: 17px; 
         }
 
         .Filter-container {
@@ -197,7 +198,7 @@
             padding-top: 3rem;
             flex-direction: column;
             position: relative;
-             bottom: 3rem;
+            bottom: 3rem;
           }
 
           .Form-wrapper{
@@ -219,19 +220,31 @@
       
       /* Extra Small Screens (breakpoint at 767px) */
       @media (max-width: 767px) {
-        .Sort-container {
-          width: 100%;
-          max-width: 767px;
-        }
-        #product-counter{
-          margin-left: 0.5rem;
-        }
+          .Sort-container {
+            width: 100%;
+            max-width: 767px;
+          }
+          #product-counter{
+            margin-left: 0.5rem;
+          }
+        
+          .Filter-container,
+          .Form-wrapper {
+            flex-direction: column;
+          }
+      }
+
+
+      @media (max-width: 450px) {
       
         .Filter-container,
         .Form-wrapper {
           flex-direction: column;
         }
+
+        .Sort {
+          top: -1rem;
+          right: 1.5rem;
+          align-self: center;
       }
-
-
-      
+      }

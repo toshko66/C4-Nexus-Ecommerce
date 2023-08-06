@@ -3,14 +3,15 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Product from '../Products/Product';
 import Sidebar from '../Products/Sidebar';
+import SortFilter from '../Sorting/SortFilter';
 import '../../css/Products.css';
-import SortFilter from '../Products/SortFilter';
 
 const Category = () => {
-  const { category } = useParams();
+  const { category } = useParams(); // Get category from URL
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
+  // Fetch products of the selected category
   useEffect(() => {
     axios.get(`https://fakestoreapi.com/products/category/${category}`)
       .then(response => {
@@ -19,13 +20,15 @@ const Category = () => {
       })
       .catch(error => {
         console.error('Error fetching data: ', error);
-      })
+      });
   }, [category]);
 
+  // Update the filtered products based on user selection
   const updateFilteredProducts = (filtered) => {
     setFilteredProducts(filtered);
   };
 
+  // Handle sorting of the products
   const handleSort = (option) => {
     let sortedProducts = [...filteredProducts];
 

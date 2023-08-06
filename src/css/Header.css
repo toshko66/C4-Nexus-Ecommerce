@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,400;1,600&family=Outfit:wght@400;700&family=Victor+Mono:wght@500&display=swap');
 
- 
- 
 header{
   z-index: 1;
     display: flex;
@@ -63,7 +61,7 @@ ul li a:active {
 }
 
 .Search-wrapper .Desktop-Search:focus{
-   outline: none;
+  outline: none;
 }
 
 
@@ -89,43 +87,28 @@ ul li a:active {
 }
 
 
-
-@media (max-width: 1920px) {
-    .Search-wrapper .search-button{
-        display: none;
-    }
-    header {
-      /* Adjustments specific to large screens */
-    }
-    ul li {
-      font-size: 1.4em; /* You may want to reduce the font size slightly */
-    }
-    .Search-wrapper .Desktop-Search {
-      width: 280px; /* Adjust the width of the search bar */
-    }
-    /* Add more adjustments as needed */
-  }
   
 
   @media (max-width: 1599px) {
     .Search-wrapper .search-button{
-        display: none;
+      display: none;
     }
     header {
-        justify-content: space-evenly;
+      justify-content: space-evenly;
     }
 
     .Logo-wrapper{
-        width: 140px;
+      width: 140px;
     }
 
     .Logo-wrapper img{
-        width: 180px;
+      margin-top: 10px;
+      width: 180px;
     }
 
 
     ul{
-        gap:25px
+      gap:25px
 
     }
 
@@ -139,16 +122,19 @@ ul li a:active {
     }
     
     .Search-wrapper a{
-font-size: 35px;
+      font-size: 35px;
     }
+
   }
 
   @media (max-width: 1023px) {
+
     .Search-wrapper .search-button{
       display: none;
   }
+
   header {
-      justify-content: space-evenly;
+    display: block;
   }
 
   .Search-wrapper .Desktop-Search {
@@ -157,13 +143,14 @@ font-size: 35px;
     font-size: 14px;
     display:none;
   }
+
   .desktop-nav {
     display: none !important; 
   }
 
   .Search-wrapper a{
-   display: none;
-        }
+    display: none;
+  }
   
   }
 
@@ -180,7 +167,5 @@ font-size: 35px;
       display: none;
     }
 
-    
-    /* Add more adjustments as needed */
   }
   

@@ -130,19 +130,20 @@ font-size: 30px;
   }
   
 @media (min-width: 1023px) {
+  
   .burger-menu {
     display: none;
   }
+
 }
 
 
 @media (max-width: 1023px) {
-   
+
 .burger-menu .Mobile-Search{
     width: 150px;
     height: 33px;
     font-size: 14px;
-
   }
   
   }
