@@ -3,6 +3,7 @@ import axios from 'axios';
 import Product from './Product';
 import Filter from './Filters';
 import SortFilter from './SortFilter';
+import Sidebar from './Sidebar';
 import '../../css/Products.css';
 
 const Products = () => {
@@ -11,13 +12,6 @@ const Products = () => {
     const [categories, setCategories] = useState([]);
     const [showPerPage, setShowPerPage] = useState(9); // Number of products shown per page
 
-  const updateShowPerPage = () => {
-        if (window.innerWidth <= 1023) {
-            setShowPerPage(prevPerPage => prevPerPage + (prevPerPage % 2 === 0 ? 0 : 1));
-        } else {
-            setShowPerPage(9);
-        }
-    };
 
     useEffect(() => {
     axios.get('https://fakestoreapi.com/products')
@@ -43,6 +37,8 @@ const Products = () => {
 
     const handleSort = (option) => {
         let sortedProducts = [...filteredProducts];
+
+        
     
         switch (option) {
             case 'alphabetical-a-z':
@@ -72,28 +68,28 @@ const Products = () => {
 
     return (
         <div className='Sort-container'>
-            <SortFilter handleSort={handleSort} />
-            <div className='Filter-container'>
-                <Filter products={products} categories={categories} updateFilteredProducts={updateFilteredProducts} />
-                <div className='Products-container'>
-                    {filteredProducts.map(product => (
-                        <Product key={product.id} product={product} />
-                    ))}
-                </div>
+          <SortFilter handleSort={handleSort} />
+          <div className='Filter-container'>
+            <Sidebar products={products} categories={categories} updateFilteredProducts={updateFilteredProducts} />
+            <div className='Products-container'>
+              {filteredProducts.map(product => (
+                <Product key={product.id} product={product} />
+              ))}
             </div>
-            {/* Add product counter display */}
-            <div id="product-counter">
-                {productCounter()}
-            </div>
-            {products.length > showPerPage ? (
-                <button className="load-more-button" onClick={loadMore}>
-                    Load More
-                </button>
-            ) : (
-                <p className='bottom-message'>All products have been loaded.</p>
-            )}
+          </div>
+          <div id="product-counter">
+            {productCounter()}
+          </div>
+          {products.length > showPerPage ? (
+            <button className="load-more-button" onClick={loadMore}>
+              Load More
+            </button>
+          ) : (
+            <p className='bottom-message'>All products have been loaded.</p>
+          )}
         </div>
-    );
-}
-
-export default Products;
+      );
+    };
+    
+    export default Products;
+    

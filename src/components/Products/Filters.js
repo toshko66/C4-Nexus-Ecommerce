@@ -4,6 +4,7 @@ import '../../css/Filters.css';
 
 const Filters = ({ products, categories, updateFilteredProducts, isCategoryPage }) => {
     const [filters, setFilters] = useState({ category: 'All', price: '' });
+    
 
     const priceRanges = ['1-25', '26-50', '51-100', '101-250', '251-500', '501-1000'];
 
@@ -33,7 +34,7 @@ const Filters = ({ products, categories, updateFilteredProducts, isCategoryPage 
     return (
         <form onSubmit={handleSubmit} className='Form-wrapper'>
             <div className='Form-header'>
-               <h2>Filters <FaFilter/></h2> 
+                <h2>Filters <FaFilter/></h2> 
             </div>
             {!isCategoryPage && <div className='Filters-wrapper'>
                 <label className='Dropdown'>
