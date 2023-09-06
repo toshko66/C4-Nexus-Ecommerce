@@ -74,7 +74,6 @@ Responsible for filtering functionality.
 
 - **Integration of Features**: Combining different features like sorting, filtering, and pagination into a seamless user experience.
 
-- **Time managment**: Unfortunetly the task aligned with a 7 days vacation and I hope I've done the best for 3 days.
 ## Setup
 
 To get started with the project, follow these steps:
